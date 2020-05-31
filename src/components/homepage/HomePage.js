@@ -60,7 +60,7 @@ class HomePage extends React.Component {
                 fluid
                 style={{ padding: 0, height: 300 }}
                 className="main-graphic"
-                src={require("./images/main-logo.png")}
+                src={require("./images/light-logo.png")}
               />
             </Col>
           </AnimationWrapper>
@@ -205,8 +205,8 @@ class HomePage extends React.Component {
                 alignItems: "center"
               }}
             >
-              <h3 className="homepageTitle" style={{ marginBottom: "20px" }}>
-                Our Team
+              <h3 className="homepageTitle" style={{ marginBottom: "10px" }}>
+                Our Team 
               </h3>
             </Row>
             <Row>
@@ -214,18 +214,21 @@ class HomePage extends React.Component {
                 md={6}
                 sm={12}
                 style={{
-                  fontFamily: "Lora",
-                  display: "flex-inline",
+                  display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  textAlign:"center"
                 }}
               >
-              Luke and Peyton are cousins from the Midwest who after finishing school, went into Tech and Business. <br></br><br></br>After playing Division 1 Football at Purdue University, where he graduated with a BS in Supply Chain Management and a Masters in Management with a focus in Marketing, he went into the food manufacturing industry, specializing in operations managemnt and ecommerce as well as business development. More recently, he has experience in Tech as a pre-sales technical expert of CRM and CPQ software, working with executive suites to solve business development challenges. <br></br><br></br>Luke is a recent graduate of Duke University, who has working in several technical roles as well as sales and business development roles. Through stints with General Motors, Optiver Financial Services, numerous software engineering startups, and his own ventures, he has navigated into personal protective equipment to address its ballooning demand in the United States due to the coronavirus.
+              <Person
+                  name="Luke Truitt" 
+                  title="Co-Founder, CEO"
+                  img="luke"
+                  onClick="mailto:luke@t2ppe.com"
+              />
               </Col>
               <Col
-                lg={3}
-                md={6}
+                lg={6}
+                md={12}
                 style={{
                   display: "flex",
                   justifyContent: "center",
@@ -234,26 +237,45 @@ class HomePage extends React.Component {
               >
                 <Person
                   name="Peyton Truitt" 
+                  title="Co-Founder, COO"
                   img="peyton"
-                  onClick="mailto:truittdevelopment@gmail.com"
-              />
-              </Col>
-              <Col
-                lg={3}
-                md={6}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Person
-                  name="Luke Truitt" 
-                  img="luke"
-                  onClick="mailto:truittdevelopment@gmail.com"
+                  onClick="mailto:peyton@t2ppe.com"
               />
               </Col>
             </Row>
+            <Row>
+            <Col
+                md={6}
+                sm={12}
+                className="description"
+                style={{
+                  fontFamily: "Lora",
+                  display: "flex-inline",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textAlign:"center",
+                  padding: "2%"
+                }}
+              >
+              Luke is a recent graduate of Duke University, who has working in several technical roles as well as sales and business development roles. Through stints with General Motors, Optiver Financial Services, numerous software engineering startups, and his own ventures, he has navigated into personal protective equipment to address its ballooning demand in the United States due to the coronavirus.
+              </Col>
+              <Col
+                md={6}
+                sm={12}
+                className="description"
+                style={{
+                  fontFamily: "Lora",
+                  display: "flex-inline",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textAlign:"center",
+                  padding: "2%"
+                }}
+              >
+              After playing Division 1 Football at Purdue University, where he graduated with a BS in Supply Chain Management and a Masters in Management with a focus in Marketing, he went into the food manufacturing industry, specializing in operations managemnt and ecommerce as well as business development. More recently, he has experience in Tech as a pre-sales technical expert of CRM and CPQ software, working with executive suites to solve business development challenges. 
+              </Col>
+            </Row>
+            
           </Container>
         </Container>
         <Footer />

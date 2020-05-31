@@ -20,7 +20,7 @@ class Navigation extends React.Component {
         fluid
         style={{
           padding: "0",
-          backgroundColor: this.props.backgroundColor || "#222222"
+          backgroundColor: this.props.backgroundColor || "#888888"
         }}
       >
         <div
@@ -38,7 +38,7 @@ class Navigation extends React.Component {
                 />
               </Link>
             </Navbar.Brand>
-            <a href="mailto:truittdevelopment@gmail.com">Order Here</a>
+            <a style={{color: "#000000"}}href="mailto:truittdevelopment@gmail.com">Order Here</a>
           </Navbar>
         </div>
       </Container>

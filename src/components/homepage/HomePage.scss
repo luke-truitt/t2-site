@@ -23,6 +23,19 @@ $main-white: #f2f4f5;
   text-align: center;
 }
 
+.homepageSubtitle {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 35px;
+  text-align: center;
+}
+@media (max-width: 990px) {
+  .description {
+      display: none;
+  }
+}
 .homepageButton {
   display: inline-block;
   vertical-align: middle;

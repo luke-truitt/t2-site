@@ -7,12 +7,12 @@ import {
   Col,
   Image,
   Card,
-  Carousel
 } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 import AnimationWrapper from "./AnimationWrapper.js";
 import Canvas from "../canvas/Canvas";
 import Animation from "../canvas/Animation";
+import Carousel from "./Carousel";
 import Footer from "../tools/Footer";
 import Navigation from "../tools/Navigation";
 import ThemeCard from "./ThemeCard";
@@ -51,37 +51,30 @@ class HomePage extends React.Component {
                 justifyContent: "center",
                 alignItems: "center",
                 width: "100%",
-                height: "100vh" 
+                height: "20vh"
               }}
             >
               {/**Icon */}
               {/* PUT THE ANIMATION REF(IN CONSTRUCTOR) HERE*/}
               <Image
                 fluid
-                style={{ padding: 0, height: 300 }}
+                style={{ padding: 0, height: 200, marginTop: "200px" }}
                 className="main-graphic"
                 src={require("./images/light-logo.png")}
               />
             </Col>
-          </AnimationWrapper>
-        </Container>
-
-        {/**ABOUT SECTION */}
-        <Container
-          fluid
-          className="boxShadowed"
-          style={{ backgroundColor: "#dddddd", color: "#202020" }}
-        >
-          <Container>
+            <Container style={{height:"50vh"}}>
             <Row
               style={{
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "center"
+                alignItems: "center",
+                marginTop: "200px",
+                color: "#dddddd"
               }}
             >
               <h3 className="homepageTitle" style={{ marginBottom: "20px" }}>
-                What we do
+                Our Mission
               </h3>
             </Row>
             <Row>
@@ -94,9 +87,10 @@ class HomePage extends React.Component {
                   justifyContent: "center",
                   alignItems: "center",
                   textAlign:"center",
+                  color: "#dddddd"
                 }}
               >
-              T2 Development provides PPE for clinics, hospitals, nursing homes, businesses and individuals. By exclusively partnering with a manufacturer in Shanghai, China, T2 brings the Chinese expertise in working with the coronavirus to the United States. Our primary product is the highly sought after KN-95 mask, shown to the right. We are selling these at $3.50 per mask for orders above 5 masks. All equipment is stored in the United States, allowing for quick delivery.
+              T2 Development provides personal protective equipment (PPE) for clinics, hospitals, nursing homes, businesses and individuals. By partnering with an FDA-approved manufacturer in Shanghai, China, we have secured exclusive North American distribution rights for KN95 protective masks, available at a competitive price. Supplies are stored at our distribution center in Austin, TX.
               </Col>
               <Col md={6} sm={12}
               style={{
@@ -115,7 +109,9 @@ class HomePage extends React.Component {
               </Col>
             </Row>
           </Container>
+          </AnimationWrapper>
         </Container>
+
         {/**MASKS SECTION */}
         <Container
           fluid
@@ -136,34 +132,50 @@ class HomePage extends React.Component {
             </Row>
             <Row>
             <Col
-                md={6}
-                sm={12}
+                md={4}
+                sm={8}
                 style={{
                   fontFamily: "Lora",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                   textAlign:"center",
+                  fontSize:"20pt"
                 }}
               >
               Packaging
               </Col>
               <Col
-                md={6}
-                sm={12}
+                md={4}
+                sm={8}
                 style={{
                   fontFamily: "Lora",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                   textAlign:"center",
+                  fontSize:"20pt"
                 }}
               >
               Features
               </Col>
+              <Col
+                md={4}
+                sm={8}
+                style={{
+                  fontFamily: "Lora",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textAlign:"center",
+                  fontSize:"20pt"
+                }}
+              >
+              Why it Matters
+              </Col>
             </Row>
             <Row>
-              <Col md={6} sm={12}
+              <Col md={4} sm={8}
               style={{
                   fontFamily: "Lora",
                   display: "flex",
@@ -178,7 +190,7 @@ class HomePage extends React.Component {
                 src={require("./images/packaging.JPG")}
               />
               </Col>
-              <Col md={6} sm={12}
+              <Col md={4} sm={8}
               style={{
                   fontFamily: "Lora",
                   display: "flex",
@@ -191,6 +203,21 @@ class HomePage extends React.Component {
                 style={{ padding: 0 }}
                 className="dash-graphic"
                 src={require("./images/mask_advantages.JPG")}
+              />
+              </Col>
+              <Col md={4} sm={8}
+              style={{
+                  fontFamily: "Lora",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textAlign:"center",
+                }}>
+              <Image
+                fluid
+                style={{ padding: 0 }}
+                className="dash-graphic"
+                src={require("./images/T2_Benefits.png")}
               />
               </Col>
             </Row>
@@ -276,6 +303,33 @@ class HomePage extends React.Component {
               </Col>
             </Row>
             
+          </Container>
+        </Container>
+        <Container fluid className="boxShadowed"  style={{ backgroundColor: "#dddddd", color: "#222222" }}>
+          <Container>
+            <Row
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}
+            >
+              <h3 className="homepageTitle" style={{ marginBottom: "10px" }}>
+                Testimonials 
+              </h3>
+            </Row>
+            <Row>
+              <Col
+                xs={12}
+                style={{
+                  fontFamily: "Lora",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                <Carousel style={{ width: "100%" }} />
+              </Col>
+            </Row>  
           </Container>
         </Container>
         <Footer />

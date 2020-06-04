@@ -221,6 +221,9 @@ class HomePage extends React.Component {
               />
               </Col>
             </Row>
+            <Row >
+              <h3 style={{textAlign: "center", marginTop:"30px"}}>Our masks are FDA approved, check out the documentation <a href="/media/fda.png" target="_blank">here</a>. <a href="/media/test_results.pdf" target="_blank">Here are the test results</a>.</h3>
+            </Row>
           </Container>
         </Container>
         <Container fluid className="boxShadowed"  style={{ backgroundColor: "#dddddd", color: "#222222" }}>
@@ -248,7 +251,7 @@ class HomePage extends React.Component {
               >
               <Person
                   name="Luke Truitt" 
-                  title="Co-Founder, CEO"
+                  title=""
                   img="luke"
                   onClick="mailto:luke@t2ppe.com"
               />
@@ -264,7 +267,7 @@ class HomePage extends React.Component {
               >
                 <Person
                   name="Peyton Truitt" 
-                  title="Co-Founder, COO"
+                  title=""
                   img="peyton"
                   onClick="mailto:peyton@t2ppe.com"
               />

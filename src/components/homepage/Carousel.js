@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Carousel, Row, Container, Col, Spinner } from "react-bootstrap";
+import { Carousel, Row, Container, Col, Image, Spinner } from "react-bootstrap";
 import "./HomePage.scss";
 import { Link } from "react-router-dom";
 
@@ -9,15 +9,18 @@ class CustomCarousel extends React.Component {
   componentDidMount = async () => {
     const testimonials = [{
       name: "St. Cloud ENT",
-      quote: "Amazing Masks!"
+      quote: "Amazing Masks!",
+      image: "scent.png"
     },
     {
       name: "Westminster",
-      quote: "These people save lives."
+      quote: "These people save lives.",
+      image: "westminster.png"
     },
     {
       name: "Duray Family Dentistry",
-      quote: "This has given my employees so much more security."
+      quote: "This has given my employees so much more security.",
+      image: "duray.png"
     }]
 
     this.setState({ testimonials: testimonials, loading: false });
@@ -32,15 +35,13 @@ class CustomCarousel extends React.Component {
       <Carousel.Item key={index}>
         <Container>
           <Row>
-            <h3>
-              <a target="_blank" href={testimonials.webLink} className="carouselLink">
-                {testimonials.name}
-              </a>
-            </h3>
-          </Row>
-          <Row>
-          
-          <p>{testimonials.quote}</p>
+          <Image
+                fluid
+                style={{ padding: 0 }}
+                className="main-graphic"
+                src={require("./images/" + testimonials.image)}
+              />
+          <h3 style={{padding: 50, width: "40%", float:"right"}}>"{testimonials.quote}"</h3>
           </Row>
         </Container>
       </Carousel.Item>

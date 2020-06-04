@@ -33,15 +33,16 @@ class CustomCarousel extends React.Component {
   render() {
     const slides = this.state.testimonials.map((testimonials, index) => (
       <Carousel.Item key={index}>
-        <Container>
-          <Row>
+        <Container style={{ paddingBottom: "50px"}}>
+          <Row style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+          <h3 style={{padding: 50, width: "100%", float:"right"}}>"{testimonials.quote}"</h3>
+          </Row>
+          <Row style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
           <Image
-                fluid
-                style={{ padding: 0 }}
+                style={{ padding: 0, height: "40px" }}
                 className="main-graphic"
                 src={require("./images/" + testimonials.image)}
               />
-          <h3 style={{padding: 50, width: "40%", float:"right"}}>"{testimonials.quote}"</h3>
           </Row>
         </Container>
       </Carousel.Item>

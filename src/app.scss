@@ -40,7 +40,7 @@ header {
 }
 
 a.contact {
-  color: $lightest-grey !important;
+  color: $main-grey !important;
   & :hover {
   }
 }
@@ -173,9 +173,8 @@ a.homepage-link {
   font-family: "Lora", monospace;
   height: 7rem;
   padding: 1rem;
-  margin-top: 2rem;
-  background-color: $main-grey;
-  color: $main-white;
+  background-color: $main-white;
+  color: $dark-grey;
 }
 
 .theme-button {

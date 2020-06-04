@@ -15,7 +15,7 @@ class Footer extends React.Component {
           <a>Questions, comments? Contact us:</a>
           <br />
           <a className="contact" href="mailto: truittdevelopment@gmail.com">
-          info@truittdevelopment.com
+          info@t2ppe.com
           </a>
           <br />
         </center>

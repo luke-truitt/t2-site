@@ -7,6 +7,7 @@ import {
   Col,
   Image,
   Card,
+  Form
 } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 import AnimationWrapper from "./AnimationWrapper.js";
@@ -22,10 +23,17 @@ import Person from "./Person";
 class HomePage extends React.Component {
   state = { redirect: false };
 
+  constructor() {
+    super();
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
-  handleProjectsClick = () => {
-    this.setState({ redirect: true });
-  };
+  handleSubmit(event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    
+    console.log(data);
+  }
 
   componentDidMount() {
     this.setState({ redirect: false });
@@ -308,8 +316,8 @@ class HomePage extends React.Component {
             
           </Container>
         </Container>
-        <Container fluid className="boxShadowed"  style={{ backgroundColor: "#dddddd", color: "#222222" }}>
-          <Container>
+        <Container fluid className="boxShadowed"  style={{ backgroundColor: "#ffffff", color: "#222222" }}>
+          <Container >
             <Row
               style={{
                 display: "flex",
@@ -334,6 +342,31 @@ class HomePage extends React.Component {
               </Col>
             </Row>  
           </Container>
+        </Container>
+        <Container id="order" fluid className="boxShadowed" 
+                style={{ display: "flex-inline",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  backgroundColor: "#dddddd"}}>
+          <h1 style={{paddingTop: "20px", 
+                  textAlign:"center", color: "#222222"}}>Order Here</h1>
+          <Form style={{paddingLeft: "25%", paddingRight: "25%", justifyContent: "center", alignItems: "center"}}>
+            <Form.Group controlId="formName">
+              <Form.Label style={{color: "#222222"}}>Name</Form.Label>
+              <Form.Control type="text" placeholder="Ex. William Patterson" />
+            </Form.Group>
+            <Form.Group controlId="formEmail">
+              <Form.Label style={{color: "#222222"}}>Email Address</Form.Label>
+              <Form.Control type="email" placeholder="Enter email" />
+            </Form.Group>            
+            <Form.Group controlId="formQuantity">
+              <Form.Label style={{color: "#222222"}}>Quantity</Form.Label>
+              <Form.Control type="number" placeholder="Ex. 1000" />
+            </Form.Group>
+            <Button variant="secondary" type="submit">
+              Submit
+            </Button>
+          </Form>
         </Container>
         <Footer />
       </div>

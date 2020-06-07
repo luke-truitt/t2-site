@@ -15,7 +15,6 @@ const headshots = {
 };
 
 function Person(props) {
-  console.log(headshots[props.img]);
 
   return (
     <Col style={{ padding: "2rem", alignContent: "center", textAlign:"center", justifyContent: "center", width:"100%"}}>

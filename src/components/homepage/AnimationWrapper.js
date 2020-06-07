@@ -1,6 +1,6 @@
 import React from "react";
 import * as VANTA from "vanta";
-import DOTS from "vanta/dist/vanta.cells.min";
+import DOTS from "vanta/dist/vanta.waves.min";
 import * as THREE from "three";
 //mport BIRDS from 'vanta/dist/vanta.birds.min'
 
@@ -16,8 +16,7 @@ class AnimationWrapper extends React.Component {
       el: this.vantaRef.current,
       THREE: { ...THREE },
       showLines: false,
-      color1: "#dddddd",
-      color2: "#222222",
+      color: "#628cf0",
       mouseControls: true,
       touchControls: true,
       minHeight: 200.00,

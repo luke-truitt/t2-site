@@ -253,7 +253,7 @@ class HomePage extends React.Component {
               </Col>
             </Row>
             <Row >
-              <h3 style={{textAlign: "center", marginTop:"30px"}}>Our masks are FDA approved, check out the documentation <a href="/media/fda.png" target="_blank">here</a>. <a href="/media/test_results.pdf" target="_blank">Here are the test results</a>.</h3>
+              <h3 style={{textAlign: "center", marginTop:"30px"}}>Our masks are FDA approved, check out the documentation <a href="/fda.png" target="_blank">here</a>. <a href="/test_results.pdf" target="_blank">Here are the test results</a>.</h3>
             </Row>
           </Container>
         </Container>

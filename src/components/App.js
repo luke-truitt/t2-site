@@ -18,23 +18,6 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/projects" component={ProjectsPage} />
-
-        {projects.map((project, index) => (
-          <Route
-            key={index}
-            exact
-            path={`/${project.link}`}
-            component={() => (
-              <IndividualProject
-                title={project.title}
-                image={project.image}
-                abstract={project.abstract}
-                team={project.team}
-              />
-            )}
-          />
-        ))}
       </BrowserRouter>
     );
   }

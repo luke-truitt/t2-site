@@ -7,10 +7,10 @@ $main-white: #f2f4f5;
 
 .carousel-control-next,
 .carousel-control-prev {
-    filter: invert(100%);
+  filter: invert(100%);
 }
 
-.carousel-indicators .active{
+.carousel-indicators .active {
   background-color: #444444;
 }
 
@@ -47,7 +47,7 @@ $main-white: #f2f4f5;
 }
 @media (max-width: 990px) {
   .description {
-      display: none;
+    display: none;
   }
 }
 .homepageButton {
@@ -115,4 +115,33 @@ $main-white: #f2f4f5;
   & :hover {
     cursor: pointer;
   }
+}
+
+.app-product {
+  margin: 0px 20px 50px 20px;
+}
+
+.app-collection {
+}
+
+.app-collection .collection-title {
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-style: italic;
+  letter-spacing: 0.2em;
+  color: #adadad;
+  margin: 50px 0px;
+}
+
+.app-collection .product-display {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.app-collection .gradient-dash {
+  width: 100%;
+  height: 1px;
 }
